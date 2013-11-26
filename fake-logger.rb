@@ -7,8 +7,6 @@ file = File.open(sample_log, "r")
 while true
   File.open("output/#{output_file}", 'w+') do |file|
     file.puts(@data[rand(@data.length)])
-    sleep_for = (rand(10)/10.0)
-    #puts "sleeping for #{sleep_for}"
-    sleep(sleep_for)
+    sleep(rand(10)/10.0)
   end
 end
